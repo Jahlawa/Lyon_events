@@ -17,11 +17,9 @@ class Event < ApplicationRecord
 	end
 
 	def is_multiple_of_5?
-		if duration <= 0 || (duration %5 ) != 0
+		if (duration <= 0) || (duration % 5 != 0)
 			errors.add(:duration, "faut que ce soit un multiple de 5")
-
 		end
-
 	end
 end
 
