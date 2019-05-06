@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
-	belongs_to :user
-	has_many :attendances, through: :users
+	has_many :attendances
+	has_many :users, through: :attendances
+	belongs_to :organizer, class_name: "User"
 	validates :start_date, presence: true
 	validate :is_start_date_past?
 	validates :title, length: {minimum: 5, maximum: 140}, presence: true
