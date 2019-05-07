@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_06_111250) do
+ActiveRecord::Schema.define(version: 2019_05_07_092454) do
 
   create_table "attendances", force: :cascade do |t|
     t.string "stripe_customer_id"
@@ -43,6 +43,9 @@ ActiveRecord::Schema.define(version: 2019_05_06_111250) do
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
   end
 
 end

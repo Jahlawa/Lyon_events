@@ -58,6 +58,8 @@ Rails.application.configure do
   
   config.action_mailer.perform_deliveries = true
 
+  config.action_mailer.default_url_options = { host: 'lyon-event-jah.herokuapp.com', port: 3000 }
+
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
